@@ -1,0 +1,100 @@
+/* Estilos CSS externos */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9; /* Fundo cinza claro */
+    color: #333; /* Cor do texto principal */
+}
+
+@keyframes moveHeader {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+header {
+    background-color: #2c3e50; /* Azul escuro para o cabeçalho */
+    text-align: center;
+    padding: 20px;
+    color: #ecf0f1; /* Texto branco para contrastar com o fundo escuro */
+    animation: moveHeader 7s ease-out; /* Adiciona a animação ao header */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em; /* Tamanho grande para o título */
+}
+
+header img {
+    max-width: 10%;
+    height: auto;
+    margin-top: 10px;
+}
+
+main {
+    padding: 20px;
+}
+
+p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 2px solid #3498db; /* Azul claro para a borda da combobox */
+    border-radius: 5px;
+    background-color: #ecf0f1; /* Fundo cinza claro */
+    color: #333;
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #2c3e50; /* Cor mais escura para rótulos */
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border: 2px solid #3498db; /* Azul claro para a borda dos campos de entrada */
+    border-radius: 5px;
+    background-color: #ecf0f1; /* Fundo cinza claro */
+    color: #333;
+}
+
+button {
+    background-color: #3498db; /* Azul claro para o botão */
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #2980b9; /* Azul mais escuro no hover */
+}
+
+h2 {
+    font-size: 1.5em; /* Tamanho do texto maior para h2 */
+    color: #2c3e50; /* Cor mais escura para h2 */
+    margin-bottom: 15px; /* Espaçamento na parte inferior */
+}

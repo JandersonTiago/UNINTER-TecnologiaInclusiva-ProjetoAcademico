@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abelhas e Produtos Apícolas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Abelhas e Produtos Apícolas</h1>
+        <img src="{{ url_for('static', filename='images/logoMarca.jpg') }}" alt="Logo da empresa">
+    </header>
+    <main>
+        <p>
+            As abelhas, pequenas guardiãs do ecossistema, desempenham um papel inestimável na preservação da biodiversidade e na sustentabilidade do meio ambiente. Seu trabalho incansável como polinizadoras é a espinha dorsal da reprodução de plantas, garantindo não apenas a abundância de flores, mas também a produção de alimentos essenciais para a vida humana.
+        </p>
+        <p>
+            Ao voar de flor em flor, as abelhas promovem a fecundação cruzada, permitindo a formação de sementes e frutos. Esse processo não apenas perpetua a vida das plantas, mas também assegura a diversidade genética fundamental para a evolução e resistência das espécies.
+        </p>
+        <p>
+            Além desse papel vital na natureza, as abelhas são fornecedoras incansáveis de produtos apícolas que enriquecem a saúde humana. O mel, um néctar transformado pelas abelhas, não apenas encanta o paladar, mas também possui propriedades antibacterianas e antioxidantes. A própolis, uma resina coletada das árvores, e a geléia real, um nutriente extraordinário produzido pelas abelhas operárias, complementam essa rica gama de produtos apícolas, oferecendo benefícios incomparáveis para o bem-estar humano.
+        </p>
+        <p>
+            Contudo, diante dos desafios enfrentados pelas populações de abelhas em todo o mundo, é imperativo reconhecer a importância de preservar esses polinizadores. As ameaças como pesticidas, perda de habitat e mudanças climáticas impactam diretamente as colônias de abelhas, ameaçando não apenas sua existência, mas também a estabilidade de ecossistemas inteiros.
+        </p>
+        <p>
+            Assim, ao contemplarmos a maravilha das abelhas, é crucial adotar práticas de conservação, promovendo ambientes favoráveis e sustentáveis para esses insetos cruciais. Ao fazê-lo, não apenas preservamos a intrincada teia da vida na Terra, mas também garantimos a continuidade de benefícios inestimáveis proporcionados pelas abelhas para a saúde humana e a vitalidade do planeta.
+        </p>
+        <form method="POST" action="{{ url_for('enviar_mensagem') }}">
+            <h2>Formulário de Contato</h2>
+            <select name="opcao">
+                <option value="" selected disabled>Escolha uma opção</option>
+                <option value="Compra de Produtos">Compra de Produtos</option>
+                <option value="Solicitação de Retirada de Enxames">Solicitação de Retirada de Enxames</option>
+            </select>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <br>
+
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="telefone" name="telefone" required>
+            <br>
+
+            <label for="recado">Deixe um recado:</label>
+            <textarea id="recado" name="recado" rows="4" required></textarea>
+            <br>
+
+            <button type="submit">Enviar</button>
+
+            <p>
+                Para informações sobre produtos ou retirada de enxames, estamos disponíveis exclusivamente pelo WhatsApp. Entre em contato preenchendo os campos acima. Estamos prontos para ajudar de forma rápida e eficiente. Aguardamos o seu contato!
+            </p>
+        </form>
+
+        
+    </main>
+</body>
+</html>
